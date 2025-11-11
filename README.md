@@ -67,4 +67,46 @@ Hot Reload memperbarui tampilan aplikasi secara instan tanpa menghapus state, se
 Hot Restart menjalankan ulang seluruh aplikasi dari awal dan menghapus state, cocok digunakan ketika ada perubahan besar pada logika, struktur widget, atau variabel global.
 
 
-</details
+</details>
+
+<details>
+<summary> Tugas 8</summary> 
+
+**1. Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement() pada Flutter. Dalam kasus apa sebaiknya masing-masing digunakan pada aplikasi Football Shop kamu?**
+
+`Navigator.push()`
+Fungsi ini menambahkan halaman baru ke tumpukan (stack) navigator tanpa menghapus halaman sebelumnya.
+Jadi saat pengguna menekan tombol “Back”, ia akan kembali ke halaman sebelumnya. Biasanya dipakai untuk navigasi normal antar halaman seperti dari beranda ke form tambah produk.
+
+`Navigator.pushReplacement()`
+Fungsi ini mengganti halaman saat ini dengan halaman baru, sehingga halaman sebelumnya dihapus dari stack. Jadi tombol “Back” tidak akan membawa pengguna ke halaman sebelumnya. Cocok untuk transisi permanen seperti setelah login/logout.
+
+**2. Bagaimana kamu memanfaatkan hierarchy widget seperti Scaffold, AppBar, dan Drawer untuk membangun struktur halaman yang konsisten di seluruh aplikasi?**
+
+<li> Scaffold </li>
+Sebagai kerangka utama halaman yang menyediakan struktur dasar: AppBar, Drawer, dan Body. SCaffold juga memastikan semua halaman memiliki tampilan yang seragam
+<li> Appbar </li>
+Menampilkan judul halaman dan memberikan konteks pada pengguna.
+
+<li> Drawer </li>
+Berfungsi sebagai navigasi global, memungkinkan pengguna berpindah antar halaman (beranda, tambah produk, logout).
+
+Kamu sudah menerapkannya di LeftDrawer() agar konsisten di seluruh halaman.
+
+**3. Dalam konteks desain antarmuka, apa kelebihan menggunakan layout widget seperti Padding, SingleChildScrollView, dan ListView saat menampilkan elemen-elemen form? Berikan contoh penggunaannya dari aplikasi kamu.**
+`Padding`
+Memberi jarak antar elemen agar UI tidak terlihat menumpuk, meningkatkan kenyamanan visual dan keterbacaan form.
+
+`SingleChildScrollView`
+Membuat halaman bisa di-scroll jika tinggi konten melebihi layar.
+
+`ListView`
+Digunakan untuk menampilkan daftar elemen dinamis, misalnya daftar produk atau berita.
+
+Mendukung scrolling otomatis tanpa perlu SingleChildScrollView.
+
+**4. Bagaimana kamu menyesuaikan warna tema agar aplikasi Football Shop memiliki identitas visual yang konsisten dengan brand toko?**
+Untuk saat ini, penyesuaian warna tema aplikasi belum sepenuhnya disinkronkan dengan brand toko berbasis web,NewGames Shop. Warna default Flutter masih digunakan (biru standar Colors.blue), sehingga belum menggambarkan identitas visual toko secara menyeluruh.
+Langkah selanjutnya yang akan  saya lakukan adalah menyesuaikan warna utama (primary) dan warna aksen (secondary) di ThemeData agar konsisten dengan brand di website yaitu gradasi biru dan oranye yang menjadi ciri khas NewGames Shop.
+
+</details>
