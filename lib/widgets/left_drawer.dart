@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:newgames_shop/menu.dart';
-import 'package:newgames_shop/productentry_form.dart';
+import 'package:newgames_shop/screens/menu.dart';
+import 'package:newgames_shop/screens/productentry_form.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -41,7 +41,6 @@ class LeftDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.home_outlined),
             title: const Text('Halaman Utama'),
-            // Bagian redirection ke MyHomePage
             onTap: () {
               Navigator.pushReplacement(
                   context,
@@ -53,7 +52,6 @@ class LeftDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.add),
             title: const Text('Tambah Produk'),
-            // Bagian redirection ke ProductEntryFormPage
             onTap: () {
               Navigator.pushReplacement(
                   context,
